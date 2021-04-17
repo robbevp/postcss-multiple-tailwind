@@ -1,9 +1,10 @@
 const postcss = require('postcss')
+const path = require("path")
 
 module.exports = (root, result) => {
   const plugins = [];
   root.walkAtRules('multiple-tailwind', atRule => {
-    const file =  atRule.params.length ? atRule.params : `${result.opts.file.dirname}/tailwind.config.js`
+    const file =  `${path.dirname(result.opts.from)}/${atRule.params.length ? atRule.params : 'tailwind.config.js'}`
     const tailwindcss = require("tailwindcss")(file)
     plugins.push(...tailwindcss.plugins)
     atRule.remove();
