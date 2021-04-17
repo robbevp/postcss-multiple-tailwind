@@ -8,5 +8,5 @@ module.exports = (root, result) => {
     plugins.push(...tailwindcss.plugins)
     atRule.remove();
   })
-  return postcss(plugins).process(root)
+  return plugins.length ? postcss(plugins).process(root, { from: undefined }) : [];
 };
