@@ -24,3 +24,11 @@ it('should use default config if no param', async () => {
 it('should use specified config if present', async () => {
   await run('with param.css', "body {\n  color: #test;\n}")
 });
+
+it('should throw error if config does not exist', async () => {
+  const file = path.join(__dirname, 'fixtures', 'with false config.css');
+  const css = fs.readFileSync(file);
+  await expect(postcss([plugin]).process(css, { from: file })).rejects.toThrow(
+    expect.objectContaining({ message: `Cannot find config file '${__dirname}/fixtures/undefined.config.js'` }),
+  )
+});

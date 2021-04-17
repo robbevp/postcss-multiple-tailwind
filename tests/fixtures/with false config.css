@@ -1,0 +1,4 @@
+@multiple-tailwind undefined.config.js;
+body {
+  @apply mx-0;
+}
