@@ -1,4 +1,4 @@
-# PostCSS-Multiple-Tailwindcss
+# PostCSS-Multiple-Tailwind
 
 [PostCSS](https://github.com/postcss/postcss) plugin to process multiple tailwindcss configs easily.
 
@@ -19,7 +19,7 @@ This allows you to have a different theme for the two css files, or have differe
 **Step 1:** Install plugin:
 
 ```sh
-yarn add -D postcss-multiple-tailwindcss
+yarn add -D postcss-multiple-tailwind
 ```
 Note that you also should have postcss and tailwindcss installed.
 
@@ -30,7 +30,7 @@ Note that you also should have postcss and tailwindcss installed.
 module.exports = {
   plugins: [
 -   require('tailwindcss'),
-+   require('postcss-multiple-tailwindcss'),
++   require('postcss-multiple-tailwind'),
     require('autoprefixer')
   ]
 }
@@ -45,7 +45,7 @@ module.exports = {
 @tailwind utilities;
 ```
 
-Postcss-multiple-tailwindcss will insert tailwindcss into the postcss process with the `tailwind.config.js` in the same folder as the input file.  
+Postcss-multiple-tailwind will insert tailwindcss into the postcss process with the `tailwind.config.js` in the same folder as the input file.  
 
 
 You can also provide a different filename:
@@ -63,5 +63,5 @@ This project is still in an early stage, before version 1.0.0 is reached, there 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/robbevp/postcss-multiple-tailwindcss. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/robbevp/postcss-multiple-tailwind. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
