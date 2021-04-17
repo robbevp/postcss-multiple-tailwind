@@ -1,4 +1,4 @@
-# PostCSS Multiple Tailwindcss
+# PostCSS-Multiple-Tailwindcss
 
 [PostCSS](https://github.com/postcss/postcss) plugin to process multiple tailwindcss configs easily.
 
@@ -15,6 +15,8 @@ The following will process tailwind with a tailwind.config.js in the same direct
 +-- postcss.config.js
 +-- package.json
 ```
+
+This allows you to have a different theme for the two css files, or have different purge settings for both.
 ## Usage
 
 **Step 1:** Install plugin:
@@ -45,6 +47,9 @@ module.exports = {
 @tailwind components;
 @tailwind utilities;
 ```
+
+Postcss-multiple-tailwindcss will insert tailwindcss into the postcss process with the `tailwind.config.js` in the same folder as the input file.  
+
 
 You can also provide a different filename:
 
