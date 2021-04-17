@@ -2,9 +2,6 @@
 
 [PostCSS](https://github.com/postcss/postcss) plugin to process multiple tailwindcss configs easily.
 
-
-The following will process tailwind with a tailwind.config.js in the same directory as the input file.
-
 ```
 +-- admin
 |   +-- index.css
@@ -22,7 +19,7 @@ This allows you to have a different theme for the two css files, or have differe
 **Step 1:** Install plugin:
 
 ```sh
-yarn install -D postcss-multiple-tailwindcss
+yarn add -D postcss-multiple-tailwindcss
 ```
 Note that you also should have postcss and tailwindcss installed.
 
