@@ -41,7 +41,7 @@ it("should use default config if no param in default mode", async () => {
 });
 
 it("should use specified config if present in default mode", async () => {
-  await run("manual-param.css", "");
+  await run("manual-param.css", TEST_CONFIG_OUTPUT);
 });
 
 it("should use specific default config if given in opts in manual mode", async () => {
