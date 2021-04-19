@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     colors: {
       test: "#default",
-    }
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
