@@ -1,0 +1,4 @@
+@multiple-tailwind test.config.js;
+body {
+  @apply text-test;
+}
