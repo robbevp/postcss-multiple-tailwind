@@ -1,0 +1,5 @@
+@multiple-tailwind;
+@multiple-tailwind;
+body {
+  @apply mx-0;
+}
