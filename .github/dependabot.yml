@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: saturday
+    time: "06:00"
+    timezone: Europe/Brussels
+  open-pull-requests-limit: 10
+  reviewers:
+  - robbevp
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: saturday
+    time: "06:00"
+    timezone: Europe/Brussels
+  open-pull-requests-limit: 10
+  reviewers:
+  - robbevp
