@@ -8,3 +8,4 @@ tests/
 .travis.yml
 .editorconfig
 coverage/
+.github/
