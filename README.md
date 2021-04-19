@@ -13,7 +13,7 @@
 +-- package.json
 ```
 
-This allows you to have a different theme for the two css files, or have different purge settings for both. (The configurations [presets](https://tailwindcss.com/docs/presets) are very handy to allow all your configurations to share the same base.)
+This allows you to have a different theme for the two css files, or have different purge settings for both. (The [configurations presets](https://tailwindcss.com/docs/presets) are very handy to allow all your configurations to share the same base.)
 
 ## Basic usage
 **Add `@multiple-tailwind;` to your input files.**
@@ -25,8 +25,7 @@ This allows you to have a different theme for the two css files, or have differe
 @tailwind utilities;
 ```
 
-Postcss-multiple-tailwind will insert tailwindcss into the postcss process with the `tailwind.config.js` in the same folder as the input file.  
-
+Postcss-multiple-tailwind will insert tailwindcss into the postcss process with the `tailwind.config.js` in the same folder as the input file.
 
 You can also provide a different filename:
 
@@ -43,10 +42,10 @@ You can also provide a different filename:
 ```sh
 yarn add -D postcss-multiple-tailwind
 ```
-Note that you also should have postcss and tailwindcss installed.
+Note that you also should already have postcss and tailwindcss installed.
 
 
-**Step 2:** Add the plugin to plugins list:
+**Step 2:** Add the plugin to plugins list and remove tailwindcss:
 
 ```diff
 module.exports = {
@@ -60,7 +59,7 @@ module.exports = {
 ## Options
 | Property        | Type                                                   | Description                                                                                                                             |
 | --------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| mode            | "manual", "auto" <br> **Default: "manual"**            | The mode determines whether '@multiple-tailwind' is required in each file to be processed. When setting to auto, it is not required.    |
+| mode            | "manual", "auto" <br> **Default: "manual"**            | The mode determines whether `@multiple-tailwind;` is required in each file to be processed. When setting to auto, it is not required.   |
 | defaultConfig   | string <br> **Default: "tailwind.config.js"**          | The configuration file that should be used when none is specified                                                                       |
 
 This config would look something like
@@ -75,7 +74,6 @@ module.exports = {
 ## Warning
 
 This project is still in an early stage, before version 1.0.0 is reached, there might be breaking changes with minor versions.  
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/robbevp/postcss-multiple-tailwind. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
