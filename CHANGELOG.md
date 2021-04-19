@@ -1,6 +1,8 @@
 # Change Log
 
 This project adheres to [Semantic Versioning](http://semver.org/).
+## Notice
+This project is still in an early stage. Before version 1.0.0 is reached, there might be breaking changes with minor versions. 
 
 ## v0.3.0
 

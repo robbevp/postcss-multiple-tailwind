@@ -70,10 +70,7 @@ module.exports = {
     require('autoprefixer')
   ]
 }
-```
-## Warning
-
-This project is still in an early stage, before version 1.0.0 is reached, there might be breaking changes with minor versions.  
+``` 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/robbevp/postcss-multiple-tailwind. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
