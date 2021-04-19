@@ -4,6 +4,9 @@ const fs = require("fs");
 
 const plugin = require("..");
 
+const DEFAULT_CONFIG_OUTPUT = "body {\n  color: #default;\n}";
+const TEST_CONFIG_OUTPUT = "body {\n  color: #test;\n}";
+
 async function run(inputFile, output, opts) {
   const file = path.join(__dirname, "fixtures", inputFile);
   const css = fs.readFileSync(file);
@@ -25,6 +28,7 @@ async function error(inputFile, error, opts) {
 }
 
 /* Manual mode */
+
 it("should not transform if @multiple-tailwind is not present in default mode", async () => {
   await run(
     "manual-do nothing.css",
@@ -33,15 +37,15 @@ it("should not transform if @multiple-tailwind is not present in default mode", 
 });
 
 it("should use default config if no param in default mode", async () => {
-  await run("manual-default.css", "body {\n  color: #default;\n}");
+  await run("manual-default.css", DEFAULT_CONFIG_OUTPUT);
 });
 
 it("should use specified config if present in default mode", async () => {
-  await run("manual-param.css", "body {\n  color: #test;\n}");
+  await run("manual-param.css", "");
 });
 
 it("should use specific default config if given in opts in manual mode", async () => {
-  await run("manual-default.css", "body {\n  color: #test;\n}", {
+  await run("manual-default.css", TEST_CONFIG_OUTPUT, {
     defaultConfig: "test.config.js",
   });
 });
@@ -49,17 +53,17 @@ it("should use specific default config if given in opts in manual mode", async (
 /* Auto mode */
 
 it("should use default config if no declaration in auto mode", async () => {
-  await run("auto-default.css", "body {\n  color: #default;\n}", {
+  await run("auto-default.css", DEFAULT_CONFIG_OUTPUT, {
     mode: "auto",
   });
 });
 
 it("should use specified config if present in auto mode", async () => {
-  await run("auto-param.css", "body {\n  color: #test;\n}", { mode: "auto" });
+  await run("auto-param.css", TEST_CONFIG_OUTPUT, { mode: "auto" });
 });
 
 it("should use specific default config if given in opts in auto mode", async () => {
-  await run("auto-default.css", "body {\n  color: #test;\n}", {
+  await run("auto-default.css", TEST_CONFIG_OUTPUT, {
     mode: "auto",
     defaultConfig: "test.config.js",
   });
