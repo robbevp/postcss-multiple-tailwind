@@ -63,7 +63,15 @@ module.exports = {
 | mode            | "manual", "auto" <br> **Default: "manual"**            | The mode determines whether '@multiple-tailwind' is required in each file to be processed. When setting to auto, it is not required.    |
 | defaultConfig   | string <br> **Default: "tailwind.config.js"**          | The configuration file that should be used when none is specified                                                                       |
 
-
+This config would look something like
+```js
+module.exports = {
+  plugins: [
+    require('postcss-multiple-tailwind')({ mode: 'auto', defaultConfig: 'my-app-styles.config.js' }),
+    require('autoprefixer')
+  ]
+}
+```
 ## Warning
 
 This project is still in an early stage, before version 1.0.0 is reached, there might be breaking changes with minor versions.  
