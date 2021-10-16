@@ -965,11 +965,6 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-at-least-node@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
-  integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
-
 autoprefixer@^10.2.5:
   version "10.3.6"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.3.6.tgz#537c8a046e32ec46bfe528bcc9e2a5f2d87cd4c4"
@@ -1173,14 +1168,16 @@ cjs-module-lexer@^1.0.0:
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.1.tgz#2fd46d9906a126965aa541345c499aaa18e8cd73"
   integrity sha512-jVamGdJPDeuQilKhvVn1h3knuMOZzr8QDnpk+M9aMlCaMkTDd6fBWPhiDqFvFZ07pL0liqabAiuy8SY4jGHeaw==
 
-clean-publish@^2.1.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/clean-publish/-/clean-publish-2.2.0.tgz#3d249934128757e457dc060511a056d32487f38d"
-  integrity sha512-U+/Y5YXbxnqWlh8y/toKSEGbMvIvsgfkfJ7yK0v0uQ1mz07lNNSxceY7XaFweEw8LFQo8Al3H7SuQHXbf5Xw8g==
+clean-publish@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/clean-publish/-/clean-publish-3.4.1.tgz#b1b7762504e74fb8f94ec3aa47cb584d08b67198"
+  integrity sha512-XEaDZKHLtBAPYc9DSS5N4C5nd5FQn6W4uStx84js0qSdC5FX4I+PGiFai5tPEl6usQ69nlJHvbhukD4stWjsAg==
   dependencies:
     cross-spawn "^7.0.3"
-    fs-extra "^9.1.0"
-    lilconfig "^2.0.2"
+    fast-glob "^3.2.7"
+    fs-extra "^10.0.0"
+    hosted-git-info "^4.0.2"
+    lilconfig "^2.0.3"
 
 cliui@^7.0.2:
   version "7.0.4"
@@ -1742,16 +1739,6 @@ fs-extra@^10.0.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-fs-extra@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
-  integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
-  dependencies:
-    at-least-node "^1.0.0"
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^2.0.0"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -1868,6 +1855,13 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
+
+hosted-git-info@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-4.0.2.tgz#5e425507eede4fea846b7262f0838456c4209961"
+  integrity sha512-c9OGXbZ3guC/xOlCg1Ci/VgWlwsqDv1yMQL1CWqXDL0hDjXuNcq0zuR4xqPSuasI3kqFDhqSyTjREz5gzq0fXg==
+  dependencies:
+    lru-cache "^6.0.0"
 
 hsl-regex@^1.0.0:
   version "1.0.0"
@@ -2637,11 +2631,6 @@ levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
-
-lilconfig@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.2.tgz#9f802752254697d22a5c33e88d97b7329008c060"
-  integrity sha512-4zUThttj8TQ4N7Pps92Z79jPf1OMcll4m61pivQSVk5MT78hVhNa2LrKTuNYD0AGLpmpf7zeIKOxSt6hHBfypw==
 
 lilconfig@^2.0.3:
   version "2.0.3"

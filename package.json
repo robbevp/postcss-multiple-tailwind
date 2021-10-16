@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
-    "clean-publish": "^2.1.0",
+    "clean-publish": "^3.4.1",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-jest": "^24.2.1",
