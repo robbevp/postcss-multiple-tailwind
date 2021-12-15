@@ -4,14 +4,14 @@ const fs = require("fs");
 
 const plugin = require("..");
 
-const DEFAULT_CONFIG_OUTPUT = "body {\n  color: #default;\n}";
-const TEST_CONFIG_OUTPUT = "body {\n  color: #test;\n}";
+const DEFAULT_CONFIG_OUTPUT = "color: #default";
+const TEST_CONFIG_OUTPUT = "color: #test";
 
 async function run(inputFile, output, opts) {
   const file = path.join(__dirname, "fixtures", inputFile);
   const css = fs.readFileSync(file);
   let result = await postcss([plugin(opts)]).process(css, { from: file });
-  expect(result.css).toEqual(output);
+  expect(result.css).toContain(output);
   expect(result.warnings()).toHaveLength(0);
 }
 
