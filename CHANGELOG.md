@@ -4,6 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Notice
 This project is still in an early stage. Before version 1.0.0 is reached, there might be breaking changes with minor versions. 
 
+## v0.4.0
+
+Adds support for tailwindcss 3.x [#92](https://github.com/robbevp/postcss-multiple-tailwind/pull/92) [#93](https://github.com/robbevp/postcss-multiple-tailwind/pull/93)
+
+Removed automatic tests for Node v15, since this version is no longer supported.
+
+### Internal changes
+* Updated devDependencies
+
 ## v0.3.0
 
 Adds two configuration options
