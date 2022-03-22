@@ -1,6 +1,6 @@
 {
   "name": "postcss-multiple-tailwind",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "PostCSS plugin to process multiple tailwindcss configs",
   "keywords": [
     "postcss",
