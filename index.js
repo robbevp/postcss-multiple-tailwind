@@ -1,6 +1,10 @@
-const postcss = require("postcss");
 const path = require("path");
 const fs = require("fs");
+
+const setupTrackingContext =
+  require("tailwindcss/lib/lib/setupTrackingContext").default;
+const processTailwindFeatures =
+  require("tailwindcss/lib/processTailwindFeatures").default;
 
 module.exports = (opts = {}) => {
   /*
@@ -46,8 +50,9 @@ module.exports = (opts = {}) => {
       throw new Error(`Cannot find config file '${file}'`);
     }
 
-    const tailwindcss = require("tailwindcss")(file);
-    return postcss(tailwindcss.plugins).process(root, { from: undefined });
+    // This part replicates the structure in tailwindcss/lib/index.js
+    // We need to do this to make sure all files are tracked and declared
+    processTailwindFeatures(setupTrackingContext(file))(root, result);
   };
 };
 
