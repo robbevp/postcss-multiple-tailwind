@@ -59,5 +59,13 @@
       }
     }
   },
+  "files": [
+    "CHANGELOG.md",
+    "index.js",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "yarn.lock"
+  ],
   "dependencies": {}
 }
