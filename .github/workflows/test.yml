@@ -14,13 +14,13 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 17
+          node-version: 18
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
       - name: Check lint
         run: yarn run lint --no-fix
   full:
-    name: Node.js 17 Full
+    name: Node.js 18 Full
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
@@ -28,7 +28,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 17
+          node-version: 18
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
       - name: Run tests
@@ -40,7 +40,6 @@ jobs:
         node-version:
           - 16
           - 14
-          - 12
     name: Node.js ${{ matrix.node-version }} Quick
     steps:
       - name: Checkout the repository
