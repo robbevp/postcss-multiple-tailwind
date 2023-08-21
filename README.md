@@ -1,4 +1,4 @@
-**Notice: Since v2.3 Tailwindcss contains [a builtin directive](https://tailwindcss.com/docs/functions-and-directives#config) to handle multiple config files. If you are starting a new project, you probably want to use their `@config` directive instead of this plugin.**
+**⛔️ Warning: Tailwindcss broke this plugin with their v3.3.3 release. Since there has been an [a builtin directive](https://tailwindcss.com/docs/functions-and-directives#config) for multiple configration since Tailwindcss v2.3, this plugin won't get any updates and will soon be archived ⛔️**
 
 # PostCSS-Multiple-Tailwind
 
